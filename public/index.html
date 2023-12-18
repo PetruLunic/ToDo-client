@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/styles/home.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/feedback.css">
+    <title>ToDo</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+       <div class="nav-title">
+           <a href="/">To Do List</a>
+       </div>
+        <div class="profile">
+            <div class="profile-desktop">
+                <div class="profile__name"></div>
+                <ul class="profile__actions">
+                    <a href="#" class="settings"><li class="profile__actions-item"><img class="profile__actions-item-icon" src="./assets/icons/gears-icon.svg" alt="gears"><span>Settings</span></li></a>
+                    <li class="profile__actions-item logout"><img class="profile__actions-item-icon" src="./assets/icons/logout-icon.svg" alt="logout"><span>Log Out</span></li>
+                </ul>
+            </div>
+            <div class="profile-mobile">
+                <div class="profile-mobile__sidebar-toggle">
+                    <img src="./assets/icons/bars-icon.svg" alt="bars-icon">
+                </div>
+                <div class="profile-mobile__sidebar">
+                    <div class="profile__name"></div>
+                    <ul class="profile__actions">
+                        <a href="#" class="settings"><li class="profile__actions-item"><img class="profile__actions-item-icon" src="./assets/icons/gears-icon-mobile.svg" alt="gears"><span>Settings</span></li></a>
+                        <li class="profile__actions-item logout"><img class="profile__actions-item-icon" src="./assets/icons/logout-icon.svg" alt="logout"><span>Log Out</span></li>
+                    </ul>
+                    <div class="profile-mobile__sidebar-close">
+                        <img src="./assets/icons/xmark-solid.svg" alt="close">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
+    <div class="container">
+        <h1 class="title">
+            To Do List
+        </h1>
+
+        <form class="new-task-form">
+            <input type="text" placeholder="New Task" id="newTaskInput" name="newTaskInput" required>
+            <input type="submit" class="btn" id="newTaskSubmit" value="Add">
+        </form>
+
+        <section class="tasks-container">
+            <div class="loading-animation"></div>
+            <div class="tasks-container__unchecked"></div>
+            <div class="tasks-container__checked" style="display: none">
+                <div class="tasks-container__checked-header">
+                    <div class="tasks-container__checked-header-left">
+                        <svg class="tasks-container__checked-header__icon" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+                        <h3 class="tasks-container__checked-header__title">Completed <span></span></h3>
+                    </div>
+                        <div class="tasks-container__checked-header__clear">Clear All</div>
+                </div>
+                <div class="tasks-container__checked-inner"></div>
+            </div>
+        </section>
+    </div>
+</body>
+
+<script type="module" src="assets/scripts/index.js"></script>
+<script type="module" src="assets/scripts/taskEvents.js"></script>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/settings.css">
+    <link rel="stylesheet" href="assets/styles/feedback.css">
+    <title>Document</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="nav-title">
+            <a href="/">To Do List</a>
+        </div>
+        <div class="profile">
+            <div class="profile-desktop">
+                <div class="profile__name"></div>
+                <ul class="profile__actions">
+                    <a href="#" class="settings"><li class="profile__actions-item"><img class="profile__actions-item-icon" src="./assets/icons/gears-icon.svg" alt="gears"><span>Settings</span></li></a>
+                    <li class="profile__actions-item logout"><img class="profile__actions-item-icon" src="./assets/icons/logout-icon.svg" alt="logout"><span>Log Out</span></li>
+                </ul>
+            </div>
+            <div class="profile-mobile">
+                <div class="profile-mobile__sidebar-toggle">
+                    <img src="./assets/icons/bars-icon.svg" alt="bars-icon">
+                </div>
+                <div class="profile-mobile__sidebar">
+                    <div class="profile__name"></div>
+                    <ul class="profile__actions">
+                        <a href="#" class="settings"><li class="profile__actions-item"><img class="profile__actions-item-icon" src="./assets/icons/gears-icon-mobile.svg" alt="gears"><span>Settings</span></li></a>
+                        <li class="profile__actions-item logout"><img class="profile__actions-item-icon" src="./assets/icons/logout-icon.svg" alt="logout"><span>Log Out</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
+    <section class="settings">
+        <div class="container">
+            <div class="settings-sidebar">
+                <ul class="settings-sidebar__options">
+                    <li class="settings-sidebar__item active" id="reset-password">
+                        Change Password
+                    </li>
+                    <li class="settings-sidebar__item" id="test">
+                        Test
+                    </li>
+                </ul>
+            </div>
+            <div class="setting-container">
+                <div class="settings-main reset-password active">
+                    <h3 class="settings-main-title">Change Password</h3>
+                    <div class="settings-main-inner">
+                        <form id="form">
+                            <label for="password">Current password:</label>
+                            <input type="password" name="password" id="password" required>
+
+                            <label for="newPassword">New password:</label>
+                            <input type="password" name="newPassword" id="newPassword" minlength="6" maxlength="14" required>
+
+                            <label for="repeatNewPassword">Repeat new password:</label>
+                            <input type="password" name="repeatNewPassword" id="repeatNewPassword" required>
+
+                            <input type="submit" value="Save" id="saveBtn">
+                        </form>
+                    </div>
+                </div>
+                <div class="settings-main test">
+                    <h3 class="settings-main-title">Test</h3>
+                    <div class="settings-main-inner">
+                        <form id="form2">
+                            <label for="password">Current password:</label>
+                            <input type="password" name="password" id="password1" required>
+
+                            <label for="newPassword">New password:</label>
+                            <input type="password" name="newPassword" id="newPassword1" minlength="6" maxlength="14" required>
+
+                            <label for="repeatNewPassword">Repeat new password:</label>
+                            <input type="password" name="repeatNewPassword" id="repeatNewPassword1" required>
+
+                            <input type="submit" value="Save" id="saveBtn1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+<script type="module" src="assets/scripts/index.js"></script>
+<script type="module" src="assets/scripts/settings/settings.js"></script>
+<script type="module" src="assets/scripts/settings/reset-password.js"></script>
+</html>

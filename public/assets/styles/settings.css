@@ -1,0 +1,106 @@
+.settings .container{
+    margin-top: 80px;
+    display: flex;
+}
+
+.settings-sidebar{
+    flex: 1;
+}
+.settings-sidebar__options{
+    padding: 0 20px 0 0;
+}
+
+.settings-sidebar__item{
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.settings-sidebar__item.active{
+    background-color: rgb(236, 236, 236);
+}
+
+.settings-sidebar__item:hover{
+    background-color: rgba(236, 236, 236, 0.66);
+}
+
+.setting-container{
+    margin: 0 30px;
+    padding: 15px 20px;
+    flex: 3;
+    box-shadow: 1px 1px 9px 0 rgba(0,0,0,0.75);
+    border-radius: 5px;
+}
+
+.settings-main{
+    display: none;
+}
+.settings-main.active{
+    display: block;
+}
+
+.settings-main-title{
+    padding-bottom: 10px;
+    border-bottom: 1px rgba(168, 168, 168, 0.52) solid;
+}
+
+.settings-main-inner{
+    margin-top: 30px;
+}
+
+.settings-main-inner label{
+    font-size: 14px;
+}
+
+.settings-main-inner input[type=text], input[type=password]{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.settings-main-inner input[type=submit]{
+    padding: 8px 25px;
+    cursor: pointer;
+    background-color: #4141ff;
+    border-radius: 3px;
+    color: white;
+    border: 0;
+    font-size: 14px;
+}
+
+.settings-main-inner input[type=submit]:hover{
+    opacity: 0.9;
+}
+
+.settings-main-inner input[type=submit].disabled{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+@media(max-width: 768px){
+    .settings .container{
+        margin-top: 70px;
+        flex-direction: column;
+    }
+
+    .setting-container{
+        margin: 0;
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    .settings-sidebar{
+        margin-bottom: 20px;
+    }
+    .settings-sidebar__item{
+        display: inline-block;
+    }
+
+    .settings-main-inner input[type=submit]{
+        width: 100%;
+        padding: 10px 0;
+    }
+}
